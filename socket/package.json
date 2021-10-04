@@ -1,0 +1,17 @@
+{
+  "name": "websock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "websocket": "^1.0.34",
+    "ws": "^8.2.2"
+  }
+}

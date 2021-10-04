@@ -1,0 +1,17 @@
+
+.suggestion{
+   background: white;
+}
+.suggestion  :hover{
+   background: black;
+}
+.stock_search{
+    
+    position: absolute;
+    margin-top: -39px;
+    margin-left: 150px;
+    width: 54%;
+}
+.Abcdefdg{
+   height: 82vh
+}

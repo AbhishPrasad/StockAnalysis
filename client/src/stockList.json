@@ -1,0 +1,13 @@
+{
+    "stocks":[{
+        "Stock": "Tesla",
+        "Symbol": "TSLA"
+    },{
+        "Stock": "Game Stop",
+        "Symbol": "GME"
+    },{
+        "Stock":"Apple",
+        "Symbol": "AAPL"
+    }
+]
+}

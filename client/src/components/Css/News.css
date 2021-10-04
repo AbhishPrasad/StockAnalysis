@@ -1,0 +1,8 @@
+.NewsBar{
+    overflow-y: scroll;
+    
+}
+.newsDetails{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}

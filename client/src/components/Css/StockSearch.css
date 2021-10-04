@@ -1,0 +1,23 @@
+.suggestion{
+    cursor: pointer;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 2px;
+    padding-left: 9px;
+    height: 27px;
+}
+
+.stockSearchDiv  :hover {
+    background-color:lavenderblush;
+    color: green;
+    
+}
+.suggestionTextBox{
+    height: 27px;
+    width: 100%;
+}
+
+.divider{
+    height: 2px;
+}

@@ -1,0 +1,10 @@
+.stock_container{
+    height: 83vh;
+    margin-left: 60px;
+    margin-bottom: 5px;
+    }
+.columns{
+    width: 97%;
+   max-height: 82vh;
+    margin-top: 2%;
+}
