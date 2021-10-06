@@ -27,7 +27,7 @@ const StocksList = (props) => {
         </div>
         
       </div>
-      <div className="stock_search"> <StockSearch Selected={props.SelectedStock} /></div>
+      <div className="stock_search"> <StockSearch Selected={props.selectNewStock} /></div>
       <div className='card-content'>
         { props.areStocksLoaded() ? <p className='is-size-7 has-text-info'>Click on a stock to select/unselect</p> : null }
         <table className='table is-bordered'>

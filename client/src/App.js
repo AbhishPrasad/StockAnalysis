@@ -4,13 +4,17 @@ import Dashboard from './components/Dashboard.jsx'
 import UnsafeScriptsWarning from "./components/UnsafeScriptsWarning";
 import NabBar from './components/NabBar'
 import Footer from './components/Footer'
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Main from './components/DetailsCompoenent/Main'
+import Main from './components/Main'
+import Modal from 'react-modal'
+
+
 class App extends Component {
 
   state = {
     hasError: false,
-    showSpinner: true
+    showSpinner: true,
+    showModal : false,
+    searchedStock:''
   }
 
   static getDerivedStateFromError(error) {
@@ -28,7 +32,18 @@ class App extends Component {
     this.setState({showSpinner: false});
   }
   showDetails = (stock_name) => {
-    window.location.replace('/details/:'+stock_name)
+    this.setState({
+      searchedStock: stock_name,
+      showModal: true
+    })
+  }
+  hideModal=()=>{
+    
+    this.setState({
+      
+      searchedStock:'',
+      showModal:false
+    })
   }
   render() {
     if (this.state.hasError) {
@@ -39,21 +54,10 @@ class App extends Component {
          <div className="header">
        <NabBar />
        </div>
-        
-
-        <Router>
-      <Switch>
-      
-        <Route path="/details/:stocks">
-        <Main />
-        </Route>
-        <Route path="/">
-        <Dashboard hideSpinner={this.hideSpinner} showSpinner={this.state.showSpinner} showDeatilPage={this.showDetails} /> 
-        </Route>
-      
-      </Switch>
-      </Router>
-
+       <Modal className="popUpModal" isOpen={this.state.showModal}>
+          <Main hideMod={this.hideModal} searched_Stock={this.state.searchedStock}  />  
+        </Modal>
+        <Dashboard hideSpinner={this.hideSpinner} showSpinner={this.state.showSpinner} showDeatilPage={this.showDetails} />         
         <div className="Footer">
         <Footer />
         </div>

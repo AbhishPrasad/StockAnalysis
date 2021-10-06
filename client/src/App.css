@@ -72,4 +72,11 @@ td.updated_at{
 .App{
   height: 100vh;
 }
-
+.popUpModal{
+  background-color: white;
+  margin-top: 3%;
+  height: 85%;
+  width: 98%;
+  margin-left: 1%;
+ 
+}

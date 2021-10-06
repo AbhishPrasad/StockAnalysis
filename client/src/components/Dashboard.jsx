@@ -75,6 +75,8 @@ class Dashboard extends React.Component {
   }
 
   toggleStockSelection = (stock_name) => {
+    
+    console.log(this.state.stocks)
     let new_stocks = this.state.stocks;
     new_stocks[stock_name].is_selected = !new_stocks[stock_name].is_selected
     this.setState({ stocks: new_stocks })
@@ -105,6 +107,7 @@ class Dashboard extends React.Component {
       <div className='stock_container'>
         <div className='columns'>
           <StocksList
+            selectNewStock={this.getSelectedStock}
             SelectedStock={this.props.showDeatilPage}
             stocks={this.state.stocks}
             toggleStockSelection={this.toggleStockSelection}

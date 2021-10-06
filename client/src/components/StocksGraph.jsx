@@ -62,7 +62,8 @@ class StocksGraph extends React.Component {
   // returns an array of objects, {t: timestamp, y: value}
   getStockValues = (stock) =>{
     return stock.history.map((history) => {
-      return {t: new Date(history.time), y: history.value};
+     
+      return {t: new Date(history.time), y: (history.value)};
     })
   }
 

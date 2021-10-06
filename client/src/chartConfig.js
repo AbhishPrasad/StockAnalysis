@@ -20,9 +20,9 @@ export const chartJsConfig = {
     }],
     yAxes: [{
       ticks: {
-        beginAtZero: true,
-        stepValue: 10,
-        steps: 10
+        beginAtZero: false,
+        stepValue: 1,
+        steps: 1
       },
       scaleLabel: {
         display: true,
@@ -36,7 +36,7 @@ export const chartJsConfig = {
   },
   zoom: {
     enabled: true,
-    drag: false,
+    drag: true,
     mode: 'x'
   }
 };
